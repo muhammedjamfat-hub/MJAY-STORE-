@@ -1,5 +1,6 @@
 {
-  "name": "NOVAHAUS - Premium Watches",
+  "id": "/",
+  "name": "NOVAHAUS  Premium Watches",
   "short_name": "NOVAHAUS",
   "description": "Time. Style. Confidence. Shop premium watches in Nigeria.",
   "start_url": "/",
@@ -7,6 +8,13 @@
   "background_color": "#000000",
   "theme_color": "#000000",
   "orientation": "portrait",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["shopping"],
+  "shortcuts": [
+    { "name": "Shop Watches", "url": "/shop", "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Track Order", "url": "/track-order", "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }] }
+  ],
   "icons": [
     { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
     { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
