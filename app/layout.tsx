@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     type: "website",
     images: ["/novahaus-logo.png"],
   },
+  verification: {
+    google: "MRKFjcs-t3ot9WBsI0a8k3h0Se62U9Cj6L732kRw254",
+  },
 };
 
 export const viewport: Viewport = {
