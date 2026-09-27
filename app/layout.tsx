@@ -4,6 +4,7 @@ import { CartProvider } from "@/context/CartContext";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MetaPixel from "@/components/MetaPixel";
+import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
 
 export const metadata: Metadata = {
   title: "NOVAHAUS — Premium Watches in Nigeria",
@@ -31,6 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className="font-sans antialiased flex flex-col min-h-screen">
         <MetaPixel />
+        <ServiceWorkerRegister />
         <CartProvider>
           <Header />
           <main className="flex-1">{children}</main>
