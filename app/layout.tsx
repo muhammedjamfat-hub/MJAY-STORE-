@@ -11,12 +11,12 @@ export const metadata: Metadata = {
   description:
     "Discover watches designed to elevate your everyday style. Shop premium men's, women's, and luxury watches with fast Nigeria-wide delivery.",
   manifest: "/manifest.json",
-  icons: { icon: "/novahaus-logo.png" },
+  icons: { icon: "/mjay-logo.svg" },
   openGraph: {
     title: "MJAY STORE — Premium Watches in Nigeria",
     description: "Time. Style. Confidence. Shop premium watches at MJAY STORE.",
     type: "website",
-    images: ["/novahaus-logo.png"],
+    images: ["/mjay-logo.svg"],
   },
   verification: {
     google: "MRKFjcs-t3ot9WBsI0a8k3h0Se62U9Cj6L732kRw254",

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ShoppingBag, MessageCircle, Menu, X } from "lucide-react";
+import { ShoppingBag, Menu, X } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 import { useState } from "react";
 
@@ -21,8 +21,7 @@ export default function Header() {
     <header className="bg-nova-black text-white sticky top-0 z-50">
       <div className="container-nova flex items-center justify-between h-16">
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/novahaus-logo.png" alt="MJAY STORE" width={36} height={36} className="rounded-full" />
-          <span className="font-serif text-xl tracking-widest text-nova-gold hidden sm:inline">MJAY STORE</span>
+          <Image src="/mjay-logo.svg" alt="MJAY STORE" width={180} height={52} className="h-10 w-auto" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">

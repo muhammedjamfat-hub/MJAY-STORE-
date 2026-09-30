@@ -1,0 +1,29 @@
+<svg width="900" height="320" viewBox="0 0 900 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gold" x1="70" y1="30" x2="670" y2="260" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7D36A"/>
+      <stop offset="0.25" stop-color="#F0BD46"/>
+      <stop offset="0.52" stop-color="#D28A0B"/>
+      <stop offset="0.8" stop-color="#F3C963"/>
+      <stop offset="1" stop-color="#B66B00"/>
+    </linearGradient>
+    <filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#F7C867" flood-opacity="0.8"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#D69521" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#glow)">
+    <path d="M114 220C178 88 222 58 304 55H410C467 55 483 102 515 116C545 129 565 115 584 86L621 122L624 155C659 170 706 189 742 209L675 234C650 224 622 226 596 234L580 216C560 226 531 232 504 232H303C241 232 192 240 146 258L114 220Z" fill="url(#gold)" fill-opacity="0.18"/>
+
+    <text x="72" y="186" font-family="Georgia, 'Times New Roman', serif" font-size="172" font-weight="700" fill="url(#gold)" letter-spacing="-10">MJAY</text>
+
+    <path d="M111 210C160 154 221 128 299 124H410C471 124 500 132 540 148" stroke="url(#gold)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+
+    <text x="112" y="254" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="700" fill="url(#gold)" letter-spacing="8">STORE</text>
+
+    <path d="M112 258H488" stroke="url(#gold)" stroke-width="5" stroke-linecap="round" opacity="0.9"/>
+    <path d="M90 258H116" stroke="#F5C96A" stroke-width="5" stroke-linecap="round" opacity="0.8"/>
+    <path d="M486 258H510" stroke="#F5C96A" stroke-width="5" stroke-linecap="round" opacity="0.8"/>
+  </g>
+</svg>
