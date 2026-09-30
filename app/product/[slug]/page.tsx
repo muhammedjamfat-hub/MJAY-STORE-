@@ -42,10 +42,10 @@ async function getProduct(slug: string) {
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const data = await getProduct(params.slug);
-  if (!data) return { title: "Watch Not Found — NOVAHAUS" };
+  if (!data) return { title: "Watch Not Found — MJAY STORE" };
   return {
-    title: `${data.product.name} — NOVAHAUS`,
-    description: data.product.description || `Shop ${data.product.name} at NOVAHAUS.`,
+    title: `${data.product.name} — MJAY STORE`,
+    description: data.product.description || `Shop ${data.product.name} at MJAY STORE.`,
     openGraph: { images: data.product.images?.[0] ? [data.product.images[0]] : [] },
   };
 }
@@ -62,7 +62,7 @@ export default async function ProductPage({ params }: { params: { slug: string }
     image: product.images,
     description: product.description,
     sku: product.sku,
-    brand: { "@type": "Brand", name: "NOVAHAUS" },
+    brand: { "@type": "Brand", name: "MJAY STORE" },
     offers: {
       "@type": "Offer",
       priceCurrency: "NGN",
