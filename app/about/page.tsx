@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "About NOVAHAUS" };
+export const metadata: Metadata = { title: "About MJAY STORE" };
 
 export default function AboutPage() {
   return (
     <div className="container-nova py-16 max-w-2xl">
-      <h1 className="font-serif text-3xl mb-6">About NOVAHAUS</h1>
+      <h1 className="font-serif text-3xl mb-6">About MJAY STORE</h1>
       <div className="space-y-4 text-black/70 leading-relaxed">
         <p>
-          NOVAHAUS is a Nigerian watch store built for people who value time, style, and quiet confidence.
+          MJAY STORE is a Nigerian watch store built for people who value time, style, and quiet confidence.
           Every piece in our collection is chosen to be worn every day — in the office, on a night out, or
           anywhere you want to feel put together.
         </p>

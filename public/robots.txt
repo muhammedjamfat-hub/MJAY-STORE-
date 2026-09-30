@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin
 Disallow: /api
 
-Sitemap: https://novahaus.store/sitemap.xml
+Sitemap: https://mjay-store.com/sitemap.xml

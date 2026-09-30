@@ -6,8 +6,7 @@ export default function Footer() {
       <div className="container-nova py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
           <h3 className="font-serif text-xl text-nova-gold mb-3 flex items-center gap-2">
-            <img src="/novahaus-logo.png" alt="NOVAHAUS" className="w-8 h-8 rounded-full" />
-            NOVAHAUS
+            <img src="/mjay-logo.svg" alt="MJAY STORE" className="w-28 h-auto rounded-sm" />
           </h3>
           <p className="text-sm">Time. Style. Confidence. Premium watches, delivered across Nigeria.</p>
         </div>
@@ -31,7 +30,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10 py-6 text-center text-xs">
-        © {new Date().getFullYear()} NOVAHAUS. All rights reserved.
+        © {new Date().getFullYear()} MJAY STORE. All rights reserved.
       </div>
     </footer>
   );

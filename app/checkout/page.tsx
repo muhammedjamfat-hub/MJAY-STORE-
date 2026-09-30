@@ -180,7 +180,7 @@ export default function CheckoutPage() {
             <div className="border border-nova-gold bg-nova-cream rounded-sm p-4 text-sm">
               Bank Transfer
               <p className="text-black/60 text-xs mt-1">
-                NOVAHAUS currently accepts payment by bank transfer only.
+                MJAY STORE currently accepts payment by bank transfer only.
               </p>
             </div>
 
