@@ -1,4 +1,4 @@
-# NOVAHAUS Store
+# MJAY STORE
 
 A production-ready ecommerce site for a premium Nigerian wristwatch store —
 Next.js 14 + TypeScript + Tailwind + Supabase (Postgres, Auth, Storage).
@@ -140,7 +140,7 @@ where id = 1;
 
 (You can also just edit these from `/admin/settings` — no SQL needed.)
 
-NOVAHAUS currently accepts **Bank Transfer only** at checkout — Pay on
+MJAY STORE currently accepts **Bank Transfer only** at checkout — Pay on
 Delivery and Paystack were removed from the customer-facing flow. The
 Paystack integration code is still in the project (API routes, webhook)
 in case you want to re-enable online payment later; it's simply not
