@@ -31,7 +31,7 @@ async function getData() {
 export default async function HomePage() {
   const { featured, bestsellers, newArrivals, categories, settings } = await getData();
   const whatsappNumber = settings?.whatsapp_number || process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "2347041629846";
-  const waLink = getWhatsAppLink(whatsappNumber, "Hello NOVAHAUS 👋 I'd like to ask about your watches.");
+  const waLink = getWhatsAppLink(whatsappNumber, "Hello MJAY STORE 👋 I'd like to ask about your watches.");
 
   return (
     <div>
@@ -101,10 +101,10 @@ export default async function HomePage() {
         </section>
       )}
 
-      {/* WHY SHOP NOVAHAUS */}
+      {/* WHY SHOP MJAY STORE */}
       <section className="bg-nova-cream py-16">
         <div className="container-nova">
-          <h2 className="font-serif text-2xl mb-10 text-center">Why Shop NOVAHAUS?</h2>
+          <h2 className="font-serif text-2xl mb-10 text-center">Why Shop MJAY STORE?</h2>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
             {[
               { icon: BadgeCheck, label: "Quality watches" },

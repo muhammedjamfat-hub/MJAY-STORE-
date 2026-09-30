@@ -7,14 +7,14 @@ import MetaPixel from "@/components/MetaPixel";
 import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
 
 export const metadata: Metadata = {
-  title: "NOVAHAUS — Premium Watches in Nigeria",
+  title: "MJAY STORE — Premium Watches in Nigeria",
   description:
     "Discover watches designed to elevate your everyday style. Shop premium men's, women's, and luxury watches with fast Nigeria-wide delivery.",
   manifest: "/manifest.json",
   icons: { icon: "/novahaus-logo.png" },
   openGraph: {
-    title: "NOVAHAUS — Premium Watches in Nigeria",
-    description: "Time. Style. Confidence. Shop premium watches at NOVAHAUS.",
+    title: "MJAY STORE — Premium Watches in Nigeria",
+    description: "Time. Style. Confidence. Shop premium watches at MJAY STORE.",
     type: "website",
     images: ["/novahaus-logo.png"],
   },
