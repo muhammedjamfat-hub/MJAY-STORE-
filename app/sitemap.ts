@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { supabaseServer } from "@/lib/supabase-server";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const base = process.env.NEXT_PUBLIC_APP_URL || "https://novahaus.store";
+  const base = process.env.NEXT_PUBLIC_APP_URL || "https://mjay-store.com";
   const supabase = supabaseServer();
   const { data: products } = await supabase.from("products").select("slug, updated_at").eq("active", true);
 

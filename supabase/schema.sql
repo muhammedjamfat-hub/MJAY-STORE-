@@ -1,5 +1,5 @@
 -- ============================================================
--- NOVAHAUS STORE — SUPABASE SCHEMA
+-- MJAY STORE — SUPABASE SCHEMA
 -- Run this entire file in Supabase SQL Editor (one time setup)
 -- ============================================================
 
@@ -52,7 +52,7 @@ create table if not exists products (
   price numeric(12,2) not null check (price >= 0),
   compare_at_price numeric(12,2),
   category_id uuid references categories(id),
-  brand text default 'NOVAHAUS',
+  brand text default 'MJAY STORE',
   sku text unique,
   stock_quantity integer not null default 0 check (stock_quantity >= 0),
   images text[] default '{}',
@@ -100,10 +100,10 @@ create table if not exists delivery_fees (
 -- ============================================================
 create table if not exists store_settings (
   id int primary key default 1,
-  store_name text default 'NOVAHAUS',
+  store_name text default 'MJAY STORE',
   whatsapp_number text default '2347041629846',
   support_phone text default '2347041629846',
-  support_email text default 'support@novahaus.com',
+  support_email text default 'support@mjay-store.com',
   store_address text default 'Lagos, Nigeria',
   paystack_public_key text,
   bank_name text default 'Kuda',
@@ -166,7 +166,7 @@ create table if not exists order_items (
 create index if not exists idx_order_items_order on order_items(order_id);
 
 -- ============================================================
--- ORDER NUMBER GENERATOR: NH-2026-00001
+-- ORDER NUMBER GENERATOR: MJ-2026-00001
 -- ============================================================
 create sequence if not exists order_number_seq start 1;
 
@@ -178,7 +178,7 @@ declare
 begin
   next_val := nextval('order_number_seq');
   yr := to_char(now(), 'YYYY');
-  return 'NH-' || yr || '-' || lpad(next_val::text, 5, '0');
+  return 'MJ-' || yr || '-' || lpad(next_val::text, 5, '0');
 end;
 $$ language plpgsql;
 
@@ -269,29 +269,29 @@ select
   (select id from categories where slug = p.cat_slug),
   p.sku, p.stock, p.images, p.featured, p.bestseller, p.new_arrival, p.rating
 from (values
-  ('NOVAHAUS Classic Black', 'novahaus-classic-black',
+  ('MJAY STORE Classic Black', 'mjay-classic-black',
    'A timeless black-dial watch with a stainless steel case, built for everyday sophistication.',
-   45000, 55000, 'classic-watches', 'NH-CB-001', 25,
+   45000, 55000, 'classic-watches', 'MJ-CB-001', 25,
    array['https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=800'],
    true, true, false, 4.5),
-  ('NOVAHAUS Executive Gold', 'novahaus-executive-gold',
+  ('MJAY STORE Executive Gold', 'mjay-executive-gold',
    'Gold-tone executive watch designed for boardrooms and big moments.',
-   68000, 80000, 'luxury-watches', 'NH-EG-002', 15,
+   68000, 80000, 'luxury-watches', 'MJ-EG-002', 15,
    array['https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=800'],
    true, false, true, 4.8),
-  ('NOVAHAUS Chronograph Silver', 'novahaus-chronograph-silver',
+  ('MJAY STORE Chronograph Silver', 'mjay-chronograph-silver',
    'Precision chronograph with a brushed silver finish and leather strap.',
-   52000, null, 'mens-watches', 'NH-CS-003', 20,
+   52000, null, 'mens-watches', 'MJ-CS-003', 20,
    array['https://images.unsplash.com/photo-1533139502658-0198f920d8e8?w=800'],
    false, true, false, 4.3),
-  ('NOVAHAUS Minimal Leather', 'novahaus-minimal-leather',
+  ('MJAY STORE Minimal Leather', 'mjay-minimal-leather',
    'A minimalist dial paired with genuine leather — quiet elegance for daily wear.',
-   38000, null, 'womens-watches', 'NH-ML-004', 30,
+   38000, null, 'womens-watches', 'MJ-ML-004', 30,
    array['https://images.unsplash.com/photo-1508057198894-247b23fe5ade?w=800'],
    false, false, true, 4.6),
-  ('NOVAHAUS Prestige', 'novahaus-prestige',
+  ('MJAY STORE Prestige', 'mjay-prestige',
    'Our flagship piece — a statement watch for those who value distinction.',
-   95000, 110000, 'luxury-watches', 'NH-PR-005', 8,
+   95000, 110000, 'luxury-watches', 'MJ-PR-005', 8,
    array['https://images.unsplash.com/photo-1548171915-e79a380a2a4b?w=800'],
    true, true, true, 4.9)
 ) as p(name, slug, description, price, compare_at_price, cat_slug, sku, stock, images, featured, bestseller, new_arrival, rating)
