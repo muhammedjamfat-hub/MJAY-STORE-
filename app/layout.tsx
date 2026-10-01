@@ -30,6 +30,9 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <meta name="google-site-verification" content="y50juRQtWMNC9v-c2sYHZ4LEQ9YVMMwSuPM2U3krprc" />
+      </head>
       <body className="font-sans antialiased flex flex-col min-h-screen">
         <MetaPixel />
         <ServiceWorkerRegister />
