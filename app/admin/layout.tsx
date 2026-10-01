@@ -27,7 +27,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   return (
     <div className="flex min-h-screen">
       <aside className="w-60 bg-nova-black text-white flex-shrink-0 flex flex-col">
-        <div className="p-6 font-serif text-xl text-nova-gold">NOVAHAUS</div>
+        <div className="p-6 font-serif text-xl text-nova-gold">MJAY STORE</div>
         <nav className="flex-1 px-3 space-y-1">
           {links.map((l) => {
             const active = pathname === l.href;
