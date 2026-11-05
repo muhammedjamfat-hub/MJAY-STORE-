@@ -1,0 +1,104 @@
+.sf {
+  --sf-bg1: #f7f4ec;
+  --sf-bg2: #eef1ea;
+  --sf-card: rgba(255, 255, 255, 0.78);
+  --sf-card-solid: #ffffff;
+  --sf-border: rgba(22, 21, 15, 0.09);
+  --sf-text: #16150f;
+  --sf-muted: #77756b;
+  --sf-accent: #b9892d;
+  --sf-accent-ink: #ffffff;
+  --sf-track: rgba(22, 21, 15, 0.08);
+  min-height: 100vh;
+  color: var(--sf-text);
+  background: radial-gradient(1100px 560px at 8% -8%, rgba(185, 137, 45, 0.14), transparent 60%),
+    linear-gradient(160deg, var(--sf-bg1), var(--sf-bg2));
+}
+.sf.sf-dark {
+  --sf-bg1: #100f0b;
+  --sf-bg2: #17150f;
+  --sf-card: rgba(32, 30, 23, 0.72);
+  --sf-card-solid: #201e17;
+  --sf-border: rgba(255, 255, 255, 0.1);
+  --sf-text: #f4f1e8;
+  --sf-muted: #a5a295;
+  --sf-accent: #e2b24d;
+  --sf-accent-ink: #17150f;
+  --sf-track: rgba(255, 255, 255, 0.1);
+}
+:where(.sf) *, :where(.sf) *::before, :where(.sf) *::after { border-color: var(--sf-border); }
+.sf ::placeholder { color: var(--sf-muted); opacity: 0.85; }
+
+.sf-card {
+  background: var(--sf-card);
+  border: 1px solid var(--sf-border);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03), 0 10px 28px -14px rgba(0, 0, 0, 0.18);
+}
+:where(.sf-card) { border-radius: 1.25rem; }
+.sf-muted { color: var(--sf-muted); }
+.sf-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  border-radius: 9999px; border: 1px solid var(--sf-border);
+  background: var(--sf-card-solid); color: var(--sf-text);
+  padding: 0.8rem 1.4rem; font-size: 0.9rem; font-weight: 600; text-align: center;
+}
+.sf-btn-primary { background: var(--sf-accent); color: var(--sf-accent-ink); border-color: transparent; }
+.sf-input {
+  border: 1px solid var(--sf-border); background: var(--sf-card-solid); color: var(--sf-text);
+  border-radius: 9999px; padding: 0.6rem 1rem; font-size: 0.85rem; outline: none;
+}
+.sf-input:focus { border-color: var(--sf-accent); }
+.sf-iconbtn {
+  position: relative; display: inline-flex; height: 40px; width: 40px; flex-shrink: 0;
+  align-items: center; justify-content: center; border-radius: 9999px;
+  border: 1px solid var(--sf-border); background: var(--sf-card-solid); color: var(--sf-text);
+}
+.sf-navlink { border-radius: 9999px; padding: 0.45rem 0.9rem; font-size: 0.85rem; font-weight: 500; color: var(--sf-muted); }
+.sf-navlink.is-active { background: var(--sf-accent); color: var(--sf-accent-ink); }
+.sf-navbtn {
+  position: relative; display: flex; height: 44px; width: 44px; align-items: center; justify-content: center;
+  border-radius: 9999px; color: var(--sf-muted);
+}
+.sf-navbtn.is-active { background: var(--sf-accent); color: var(--sf-accent-ink); }
+.sf-badge {
+  position: absolute; top: -2px; right: -2px; min-width: 18px; height: 18px; padding: 0 4px;
+  border-radius: 9999px; background: #cf4a40; color: #fff; font-size: 10px; font-weight: 600;
+  display: flex; align-items: center; justify-content: center;
+}
+.sf-chip {
+  display: inline-flex; align-items: center; border-radius: 9999px; padding: 0.2rem 0.7rem;
+  font-size: 0.7rem; font-weight: 600; background: var(--sf-track); color: var(--sf-muted);
+}
+.sf-chip.is-on { background: var(--sf-accent); color: var(--sf-accent-ink); }
+
+/* circle reveal when switching light/dark */
+::view-transition-old(root), ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+::view-transition-old(root) { z-index: 1; }
+::view-transition-new(root) { z-index: 9999; }
+
+/* Gives the existing pages (cart, checkout, product, tracking, contact, about) the new look */
+.sf .rounded-sm { border-radius: 1rem; }
+.sf .bg-nova-cream { background: var(--sf-card); border: 1px solid var(--sf-border); backdrop-filter: blur(12px); }
+.sf .bg-white { background-color: var(--sf-card-solid); }
+.sf [class*="text-black/"] { color: var(--sf-muted); }
+.sf [class*="border-black/"] { border-color: var(--sf-border); }
+.sf .text-nova-gold { color: var(--sf-accent); }
+.sf .border-nova-gold { border-color: var(--sf-accent); }
+.sf .fill-nova-gold { fill: var(--sf-accent); }
+.sf .bg-nova-gold { background: var(--sf-accent); color: var(--sf-accent-ink); }
+.sf .font-serif { font-family: inherit; font-weight: 600; letter-spacing: -0.01em; }
+.sf input:not([type="checkbox"]):not([type="radio"]):not([type="file"]), .sf select, .sf textarea {
+  background: var(--sf-card-solid); color: var(--sf-text); border-radius: 1rem;
+}
+.sf input:focus, .sf select:focus, .sf textarea:focus { outline: none; border-color: var(--sf-accent); }
+.sf .btn-gold, .sf .btn-primary, .sf .btn-whatsapp {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  border-radius: 9999px; padding: 0.8rem 1.4rem; font-size: 0.9rem; font-weight: 600;
+  border: 1px solid transparent; text-align: center;
+}
+.sf .btn-gold { background: var(--sf-accent); color: var(--sf-accent-ink); }
+.sf .btn-primary { background: var(--sf-text); color: var(--sf-card-solid); }
+.sf .btn-whatsapp { background: #25d366; color: #fff; }
+.sf .btn-gold:disabled, .sf .btn-primary:disabled, .sf .btn-whatsapp:disabled { opacity: 0.5; }
