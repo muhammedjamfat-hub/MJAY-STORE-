@@ -1,22 +1,22 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import "./store.css";
 import { CartProvider } from "@/context/CartContext";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import MetaPixel from "@/components/MetaPixel";
 import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
+import StoreShell from "@/components/StoreShell";
 
 export const metadata: Metadata = {
   title: "MJAY STORE — Premium Watches in Nigeria",
   description:
-    "Discover watches designed to elevate your everyday style. Shop premium men's, women's, and luxury watches with fast Nigeria-wide delivery.",
+    "Discover watches designed to elevate your everyday style. Shop men's, women's and luxury-style watches with delivery across Nigeria.",
   manifest: "/manifest.json",
-  icons: { icon: "/mjay-logo.svg" },
+  icons: { icon: "/novahaus-logo.png" },
   openGraph: {
     title: "MJAY STORE — Premium Watches in Nigeria",
-    description: "Time. Style. Confidence. Shop premium watches at MJAY STORE.",
+    description: "Time. Style. Confidence. Shop watches at MJAY STORE.",
     type: "website",
-    images: ["/mjay-logo.svg"],
+    images: ["/novahaus-logo.png"],
   },
   verification: {
     google: "MRKFjcs-t3ot9WBsI0a8k3h0Se62U9Cj6L732kRw254",
@@ -24,24 +24,22 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#000000",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f7f4ec" },
+    { media: "(prefers-color-scheme: dark)", color: "#100f0b" },
+  ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <head>
-        <meta name="google-site-verification" content="y50juRQtWMNC9v-c2sYHZ4LEQ9YVMMwSuPM2U3krprc" />
-      </head>
-      <body className="font-sans antialiased flex flex-col min-h-screen">
+      <body className="font-sans antialiased">
         <MetaPixel />
         <ServiceWorkerRegister />
         <CartProvider>
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
+          <StoreShell>{children}</StoreShell>
         </CartProvider>
       </body>
     </html>
   );
-}
+  }
